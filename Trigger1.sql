@@ -1,0 +1,10 @@
+USE AmazonCompetitor;
+GO
+
+CREATE TRIGGER trInsertDisplay
+ON Orders
+AFTER INSERT 
+AS 
+BEGIN 
+PRINT 'IMPORTANT MESSAGE TO CHANGES IN RECORDS OF ORDERS: One Record added to the table'; 
+END;

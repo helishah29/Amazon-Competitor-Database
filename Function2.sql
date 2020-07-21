@@ -1,0 +1,10 @@
+USE AmazonCompetitor;
+GO
+
+CREATE FUNCTION fnPoorRating()
+RETURNS INT
+BEGIN
+RETURN
+(SELECT MIN(Rating) FROM Review)
+END
+
